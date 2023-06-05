@@ -1,0 +1,11 @@
+{% extends "poll/base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<marquee><h3>Welcome DigiVote - A smart and Secure electoral Services Portal</h1></marquee><br><br>
+
+  <h2><u>Hi, {{request.user.get_full_name }}</u></h2><br><br><br><br><br>
+  <div class="middle">
+  <a href="{% url 'emailvoting' %}" class="btn btn1">Click Here To Vote</a></h3><br>
+  <a href="{% url 'result' %}" class="btn btn1">Click Here To See Result</a></h3>
+{% endblock %}
