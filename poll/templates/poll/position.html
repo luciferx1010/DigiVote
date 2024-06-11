@@ -1,0 +1,21 @@
+{% extends "poll/base.html" %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+  <h2>Available Position For Vote</h2>
+  <ul>
+    {% for i in obj %}
+    <div class="middle">
+      <a href="{% url 'candidate' i.id %}" class="btn btn1">{{i.title}}</a>
+    </div>
+    
+    {% empty %}
+      <p>No Positions Available</p>
+    {% endfor %}
+  </ul>
+  
+{% endblock %}
+<!-- <div class="middle">
+  <a href="{% url 'candidate' i.id %}" class="btn btn1">{{i.title}}</a>
+</div> -->
